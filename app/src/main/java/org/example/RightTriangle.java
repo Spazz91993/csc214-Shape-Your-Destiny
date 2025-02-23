@@ -5,6 +5,9 @@ public class RightTriangle extends Shapes {
     private double height;
 
     public RightTriangle(double base, double height) {
+        if (base < 0 || height < 0) {
+            throw new IllegalArgumentException("Base and height cannot be negative.");
+        }
         this.base = base;
         this.height = height;
     }
