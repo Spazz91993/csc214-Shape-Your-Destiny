@@ -14,6 +14,9 @@ public class App {
       System.out.println("Shape: " + shape.getShape());
       System.out.println("Area: " + shape.getArea());
       System.out.println("Perimeter: " + shape.getPerimeter());
+      if (shape instanceof Polygon) {
+        System.out.println("Number of sides: " + ((Polygon) shape).numberOfSides());
+    }
       System.out.println();
   }
 }

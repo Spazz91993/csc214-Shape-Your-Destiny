@@ -8,13 +8,13 @@ public class IsoscelesRightTriangle extends RightTriangle {
 
     @Override
     public double getArea() {
-        return 0.5 * super.getArea() * super.getArea();
+        return super.getArea();
     }
 
     @Override
     public double getPerimeter() {
         double hypotenuse = Math.sqrt(2) * super.getPerimeter();
-        return super.getPerimeter() + super.getPerimeter() + hypotenuse;
+        return super.getPerimeter();
     }
 
     @Override

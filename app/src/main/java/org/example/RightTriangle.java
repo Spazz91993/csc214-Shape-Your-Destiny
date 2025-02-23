@@ -1,6 +1,6 @@
 package org.example;
 
-public class RightTriangle extends Shapes {
+public class RightTriangle extends Shapes implements Polygon {
     private double base;
     private double height;
 
@@ -26,5 +26,9 @@ public class RightTriangle extends Shapes {
     @Override
     public String getShape() {
         return "Right Triangle.";
+    }
+    @Override
+    public int numberOfSides() {
+        return 3;
     }
 }

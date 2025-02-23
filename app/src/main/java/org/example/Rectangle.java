@@ -1,6 +1,6 @@
 package org.example;
 
-public class Rectangle extends Shapes {
+public class Rectangle extends Shapes implements Polygon {
     private double length;
     private double width;
 
@@ -25,5 +25,9 @@ public class Rectangle extends Shapes {
     @Override
     public String getShape() {
         return "Rectangle.";
+    }
+    @Override
+    public int numberOfSides() {
+        return 4;
     }
 }

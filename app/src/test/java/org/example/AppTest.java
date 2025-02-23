@@ -226,4 +226,33 @@ class AppTest {
       assertEquals(1.0, square.getArea(), 0.0001);
       assertEquals(4.0, square.getPerimeter(), 0.0001);
   }
+  @Test
+  public void testRectangleNumberOfSides() {
+      Shapes rectangle = new Rectangle(5.0, 10.0);
+      assertEquals(4, ((Polygon) rectangle).numberOfSides(), "Rectangle should have 4 sides");
+  }
+
+  @Test
+  public void testSquareNumberOfSides() {
+      Shapes square = new Square(4.0);
+      assertEquals(4, ((Polygon) square).numberOfSides(), "Square should have 4 sides");
+  }
+
+  @Test
+  public void testRightTriangleNumberOfSides() {
+      Shapes rightTriangle = new RightTriangle(3.0, 4.0);
+      assertEquals(3, ((Polygon) rightTriangle).numberOfSides(), "Right Triangle should have 3 sides");
+  }
+
+  @Test
+  public void testIsoscelesRightTriangleNumberOfSides() {
+      Shapes isoscelesRightTriangle = new IsoscelesRightTriangle(5.0);
+      assertEquals(3, ((Polygon) isoscelesRightTriangle).numberOfSides(), "Isosceles Right Triangle should have 3 sides");
+  }
+
+  @Test
+  public void testAnotherRectangleNumberOfSides() {
+      Shapes rectangle = new Rectangle(6.0, 8.0);
+      assertEquals(4, ((Polygon) rectangle).numberOfSides(), "Rectangle should have 4 sides");
+  }
 }
